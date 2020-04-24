@@ -1,0 +1,344 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
+	<title>KASI-STYLE</title>
+	><link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
+	<link href="css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+	
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+	<script type="text/javascript" src="js/js.js"></script>
+	<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
+	<script type="text/javascript" src="js/waypoints.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.src.js"></script>
+	<![endif]-->
+	
+	<script type="text/javascript">
+		$(document).ready(function(){	
+			$("#ajax-contact-form").submit(function() {
+				var str = $(this).serialize();		
+				$.ajax({
+					type: "POST",
+					url: "contact_form/contact_process.php",
+					data: str,
+					success: function(msg) {
+						// Message Sent - Show the 'Thank You' message and hide the form
+						if(msg == 'OK') {
+							result = '<div class="notification_ok">Your message has been sent. Thank you!</div>';
+							$("#fields").hide();
+						} else {
+							result = msg;
+						}
+						$('#note').html(result);
+					}
+				});
+				return false;
+			});															
+		});		
+	</script>
+	
+</head>
+
+<body>
+
+<div class="menu">	
+	<div class="container clearfix">
+
+		<div id="logo" class="fleft">
+			<a href="#"><img src="images/KASISTYLE.jpg"></a>
+		</div>
+
+		<div id="nav" class="fright">
+			<ul class="navigation">
+				<li data-slide="1">Home</li>
+				
+				
+			</ul>
+		</div>
+	
+	</div>
+</div>
+
+
+<div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">
+	<div class="effect_2 padding_slide1">
+		<div class="container clearfix">
+			<div class="effects">
+				<div class="container effects_1"></div>
+			</div>
+			<div id="content" class="grid_12">
+				<h1>Lockdown</h>
+				<h2>All of South Africs are in hards times wih this pandemic, coronavirus affected all of people nationwide and our leaders decided to make us stay at home so we can try to reduce the infection numbers.
+				<a class="button" title="" data-slide="2"></a>
+				
+				<div id="top_socials">
+					<ul>
+						<li class="soc1"><a href="#"></a></li>
+						<li class="soc2"><a href="#"></a></li>
+						<li class="soc3"><a href="#"></a></li>
+						<li class="soc4"><a href="#"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="slide" id="slide2" data-slide="2" data-stellar-background-ratio="0.5">
+	<div class="container clearfix">
+		
+		<div id="content" class="grid_12">
+			<h1><span>Precautions to Take</span></h1>
+			<h2>To overcome this pandermic to stay safe and use senetiser,wear facemasks and wash our hands at al times to stop the spread of the virus.
+		</div>
+		<div id="content" class="grid_4">
+			<h4>Lockdown outcome</h4>
+			<p>The street of jozi are empyt and the businessess are not operating at all wich makes our economy to suffer.Crime is peeking up as people loot shops and strike for food and money.
+			<div class="accordion">
+				<h3><span>Pictures</span></h3>
+				<div class="accord_cont">
+					<p></p>
+				</div>
+				<h3><span>Videos</span></h3>
+				<div class="accord_cont">
+					<p>Videos</p>
+				</div>                            
+				<h3><span>News</span></h3>
+				<div class="accord_cont">
+					<p></p>
+				</div>
+				
+			</div>
+		</div>
+		<div id="content" class="grid_8 omega">
+			<h4>Police car being burned</h4>
+			<img src="images/images4.jpeg" alt="" />
+			<p>Two police cars and one ambulance where burned at by the angry comunity at Boikhutso,Litchenburg.
+		</div>
+	</div>
+</div>
+
+
+
+<div class="slide" id="slide3" data-slide="3" data-stellar-background-ratio="0.5">
+	<div class="effect_2 padding_slide3">
+		<div class="container clearfix">
+		
+			<div id="content" class="grid_12">
+				<p>What to look out for</p>
+			</div>
+		
+		</div>
+	</div>
+</div>
+
+
+
+<div class="slide" id="slide4" data-slide="4" data-stellar-background-ratio="0.5">
+	<div class="container clearfix">
+		
+		<div id="content" class="grid_12">
+			<h1><span>What is new</span></h1>
+			<h2>Keeping mzansi updated</h2>
+
+			<ul id="filter_img">
+				<li class="selected filter_all">All</li>
+				<li class="filter_wedding">Music</li>
+				<li class="filter_kids">Apps</li>
+				<li class="filter_fashion">fashion</li> 
+				<li class="filter_objects">Software</li>
+			</ul>
+			<div>
+				<!-- portfolio_block -->
+				<ul class="item gallery-list">                                  
+					<li class="grid_3 item_objects">
+						<div class="hover_img">
+							<div class="img_bord"></div>
+							<img src="images/portfolio/1.jpg" alt="" />
+							<span class="portfolio_zoom"><a href="images/portfolio/full/1.jpg" rel="prettyPhoto[portfolio1]"></a></span>
+							<span class="portfolio_link"><a href="#">View item</a></span>
+							<div class="portfolio_descr"><h3></h3><p></p></div>
+						</div>
+					</li>
+					<li class="grid_3 item_fashion">
+						<div class="hover_img">
+							<div class="img_bord"></div>
+							<img src="images/portfolio/2.jpg" alt="" />
+							<span class="portfolio_zoom"><a href="images/portfolio/full/2.jpg" rel="prettyPhoto[portfolio1]"></a></span>
+							<span class="portfolio_link"><a href="#">View item</a></span>
+							<div class="portfolio_descr"><h3></p></div>
+						</div>
+					</li>
+					<li class="grid_3 item_fashion">
+						<div class="hover_img">
+							<div class="img_bord"></div>
+							<img src="images/portfolio/3.jpg" alt="" />
+							<span class="portfolio_zoom"><a href="images/portfolio/full/3.jpg" rel="prettyPhoto[portfolio1]"></a></span>
+							<span class="portfolio_link"><a href="#">View item</a></span>
+							<div class="portfolio_descr"><h3></h3><p></p></div>
+						</div>
+					</li> 
+					<li class="grid_3 item_kids">
+						<div class="hover_img">
+							<div class="img_bord"></div>
+							<img src="images/portfolio/4.jpg" alt="" />
+							<span class="portfolio_zoom"><a href="images/portfolio/full/4.jpg" rel="prettyPhoto[portfolio1]"></a></span>
+							<span class="portfolio_link"><a href="#">View item</a></span>
+							<div class="portfolio_descr"><h3></p></div>
+						</div>
+					</li>
+					<li class="grid_3 item_fashion">
+						<div class="hover_img">
+							<div class="img_bord"></div>
+							<img src="images/portfolio/5.jpg" alt="" />
+							<span class="portfolio_zoom"><a href="images/portfolio/full/5.jpg" rel="prettyPhoto[portfolio1]"></a></span>
+							<span class="portfolio_link"><a href="#">View item</a></span>
+							<div class="portfolio_descr"><h3></p></div>
+						</div>
+					</li>
+					<li class="grid_3 item_nature">
+						<div class="hover_img">
+							<div class="img_bord"></div>
+							<img src="images/portfolio/6.jpg" alt="" />
+							<span class="portfolio_zoom"><a href="images/portfolio/full/6.jpg" rel="prettyPhoto[portfolio1]"></a></span>
+							<span class="portfolio_link"><a href="#">View item</a></span>
+							<div class="portfolio_descr"><h3></p></div>
+						</div>
+					</li>
+					<li class="grid_3 item_wedding">
+						<div class="hover_img">
+							<div class="img_bord"></div>
+							<img src="images/portfolio/7.jpg" alt="" />
+							<span class="portfolio_zoom"><a href="images/portfolio/full/7.jpg" rel="prettyPhoto[portfolio1]"></a></span>
+							<span class="portfolio_link"><a href="#">View item</a></span>
+							<div class="portfolio_descr"><h3>.</p></div>
+						</div>
+					</li>
+					<li class="grid_3 item_wedding">
+						<div class="hover_img">
+							<div class="img_bord"></div>
+							<img src="images/portfolio/8.jpg" alt="" />
+							<span class="portfolio_zoom"><a href="images/portfolio/full/8.jpg" rel="prettyPhoto[portfolio1]"></a></span>
+							<span class="portfolio_link"><a href="#">View item</a></span>
+							<div class="portfolio_descr"><h3>Aliquam posuere</h3><p>.</p></div>
+						</div>
+					</li>
+					<div class="clear"></div>
+				</ul>   
+				<!-- //portfolio_block -->   
+			</div>
+			
+		</div>
+	
+	</div>
+</div>
+
+
+<div class="slide" id="slide5" data-slide="5" data-stellar-background-ratio="0.5">
+	<div class="effect_2 padding_slide5">
+		<div class="container clearfix">
+		
+			<div id="content" class="grid_12">
+				<span>Check out more</span><br><br><br>
+			
+			</div>
+		
+		</div>
+	</div>
+</div>
+
+
+
+<div class="slide" id="slide6" data-slide="6" data-stellar-background-ratio="0.5">
+	<div class="container clearfix">
+		
+		
+		<div class="clear"></div>
+		
+		
+		<div class="grid_6 omega">
+			<div class="serv_inf">
+				<img src="images/icon1.png" />
+				<a href="#">Like</a>
+				<div class="clear"></div>
+			</div>
+			<div class="serv_inf">
+				<img src="images/icon2.png" />
+				<a href="#">Share</a>
+				
+				<div class="clear"></div>
+			</div>
+			<div class="serv_inf">
+				<img src="images/icon3.png" />
+				<a href="#">Stars</a>
+				
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	
+	</div>
+</div>
+
+		
+		</div>
+	</div>
+</div>
+
+
+
+<div class="slide" id="slide8" data-slide="8" data-stellar-background-ratio="0.5">
+	<div class="container clearfix">
+		
+		
+		</div>
+		<div class="clear"></div>
+		
+		
+	
+	</div>
+</div>
+
+
+
+<div class="slide" id="slide9" data-slide="9" data-stellar-background-ratio="0.5">
+	<div class="effect_2 padding_slide9">
+		<div class="container clearfix">
+		
+			<div id="content" class="grid_12">
+				<p>Keep up with the latest</p>
+			
+			</div>
+		
+		</div>
+	</div>
+</div>
+
+
+
+<div class="slide" id="slide10" data-slide="10" data-stellar-background-ratio="0.5">
+</div>
+
+
+<div id="footer">
+	<div class="container clearfix">
+		<div class="copyright">K-S &copy; 2020 |
+		
+	</div>
+</div>
+
+
+</body>
+</html>
